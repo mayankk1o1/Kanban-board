@@ -1,0 +1,94 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f3f4f6;
+  color: #1f2937;
+}
+
+.task {
+  cursor: grab;
+  background-color: #ffffff;
+  padding: 1rem 1.25rem;
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+.task:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.task:active {
+  cursor: grabbing;
+}
+
+.dragging {
+  opacity: 0.6;
+  border: 2px dashed #a1a1aa;
+}
+
+.task-container {
+  min-height: 180px;
+  transition: background-color 0.3s ease;
+}
+
+.drag-over {
+  background-color: #e0f2fe;
+  border-radius: 0.5rem;
+}
+
+input#task-input {
+  font-size: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+  background-color: #f9fafb;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+input#task-input:focus {
+  border-color: #60a5fa;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.3);
+}
+
+button#add-task-btn {
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+button#add-task-btn:hover {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+}
+
+.kanban-column {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.column-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.task button {
+  font-size: 1.25rem;
+  background: none;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.task button:hover {
+  color: #ef4444;
+}
