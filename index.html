@@ -1,41 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Simple Kanban Board</title>
+  <title>Dark Kanban Board</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-gray-900 text-gray-100">
 
   <div class="container mx-auto p-6 max-w-6xl">
     <header class="text-center mb-10">
-      <h1 class="text-4xl font-bold text-gray-900">📝 Calm Kanban Board</h1>
-      <p class="text-gray-600 mt-2 text-lg">Organize tasks easily. Drag them across stages.</p>
+      <h1 class="text-4xl font-bold text-white">📝 Dark Kanban Board</h1>
+      <p class="text-gray-400 mt-2 text-lg">Organize tasks easily. Drag them across stages.</p>
     </header>
 
-    <div class="bg-white p-6 rounded-2xl shadow-md mb-10 max-w-2xl mx-auto">
-      <input type="text" id="task-input" placeholder="Enter a new task..." class="w-full mb-4" />
-      <button id="add-task-btn" class="w-full bg-blue-600 text-white py-2">Add Task</button>
+    <div class="bg-gray-800 p-6 rounded-2xl shadow-md mb-10 max-w-2xl mx-auto">
+      <input type="text" id="task-input" placeholder="Enter a new task..." class="w-full mb-4 bg-gray-700 text-white placeholder-gray-400 border border-gray-600" />
+      <button id="add-task-btn" class="w-full bg-indigo-600 text-white py-2 hover:bg-indigo-500">Add Task</button>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="kanban-column bg-white shadow rounded-2xl">
-        <h2 class="column-title bg-blue-50 text-blue-800">To Do</h2>
+      <div class="kanban-column bg-gray-800 shadow rounded-2xl">
+        <h2 class="column-title bg-blue-900 text-blue-300">To Do</h2>
         <div class="task-container p-4 space-y-4" data-status="todo"></div>
       </div>
 
-      <div class="kanban-column bg-white shadow rounded-2xl">
-        <h2 class="column-title bg-amber-50 text-amber-800">In Progress</h2>
+      <div class="kanban-column bg-gray-800 shadow rounded-2xl">
+        <h2 class="column-title bg-amber-900 text-amber-300">In Progress</h2>
         <div class="task-container p-4 space-y-4" data-status="inprogress"></div>
       </div>
 
-      <div class="kanban-column bg-white shadow rounded-2xl">
-        <h2 class="column-title bg-emerald-50 text-emerald-800">Done</h2>
+      <div class="kanban-column bg-gray-800 shadow rounded-2xl">
+        <h2 class="column-title bg-emerald-900 text-emerald-300">Done</h2>
         <div class="task-container p-4 space-y-4" data-status="done"></div>
       </div>
     </div>
